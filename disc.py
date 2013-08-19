@@ -20,7 +20,7 @@ for line in iter(v_ipcalc.stdout.readline,''):
 print "Total Hosts on subnet: " + v_hosts.rsplit(':',1)[1].rsplit(' ')[1]
 # likely gw's, check first three and last three IP addresses in block
 
-## check if first three and last three are valid IP addresses
+## check if first three and last three are valid IP addresses. only rely on arp response.
 
 ## if valid, attempt to route traffic manually via them (ttl = 0, get ICMP ttl expired in transit?)
 
