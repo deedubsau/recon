@@ -16,13 +16,7 @@ for line in iter(v_ipcalc.stdout.readline,''):
 		v_hosts = line.rstrip()
 		break
 
-
-
-for line in iter(v_ipcalc.stdout.readline,''):
-        if "Hosts" in line:
-                v_hosts = line.rstrip()
-                break
-
+# summarising available hosts
 print "Total Hosts on subnet: " + v_hosts.rsplit(':',1)[1].rsplit(' ')[1]
 # likely gw's
 
